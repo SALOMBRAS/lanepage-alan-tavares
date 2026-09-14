@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title">
+  <title id="title">Espaço reservado para fotografia do escritório</title>
+  <rect width="1200" height="630" fill="#0c2535"/>
+  <rect x="118" y="100" width="964" height="430" rx="18" fill="#102f42" stroke="#4b7e94" stroke-width="2"/>
+  <path d="M290 435h620M360 395V245h480v150M430 395V205h340v190" stroke="#b9e3f3" stroke-width="14" fill="none"/>
+</svg>

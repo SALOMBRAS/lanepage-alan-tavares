@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@config "../tailwind.config.ts";
+
+@custom-variant dark (&:is(.dark *));
+
+/* shadcn semantic utilities, with the project's next/font variables. */
+@theme inline {
+  --font-sans: var(--font-manrope), Arial, sans-serif;
+  --font-heading: var(--font-cormorant), Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  /* 1. Primitives: a calm night-blue canvas with white and baby-blue light. */
+  --brand-navy: #081b29;
+  --brand-gold: #b9e3f3;
+  --brand-coral: #6eb7d5;
+  --brand-coral-light: #9bd5e9;
+  --brand-gold-ink: #d9f1fa;
+  --brand-coral-ink: #8ecde5;
+  --brand-paper: #081b29;
+  --neutral-white: #0c2535;
+  --neutral-ink: #f5fbfd;
+  --neutral-soft: #0e2a3b;
+  --neutral-muted: #a9c3d0;
+  --neutral-border: #28546a;
+  --neutral-input: #79abc1;
+  --neutral-dark-surface: #102f42;
+  --neutral-dark-muted: #d8eef6;
+  --neutral-dark-border: #4b7e94;
+
+  /* 2. Semantic tokens. Light blue is reserved for small areas of emphasis. */
+  --background: var(--brand-paper);
+  --foreground: var(--neutral-ink);
+  --card: var(--neutral-white);
+  --card-foreground: var(--neutral-ink);
+  --popover: var(--neutral-white);
+  --popover-foreground: var(--neutral-ink);
+  --primary: #102f42;
+  --primary-foreground: #f5fbfd;
+  --secondary: var(--brand-gold);
+  --secondary-foreground: var(--brand-navy);
+  --muted: var(--neutral-soft);
+  --muted-foreground: var(--neutral-muted);
+  --accent: var(--brand-coral-light);
+  --accent-foreground: #081b29;
+  --destructive: var(--brand-coral-ink);
+  --destructive-foreground: var(--brand-navy);
+  --border: var(--neutral-border);
+  --input: var(--neutral-input);
+  --ring: var(--brand-navy);
+  --radius: 0.75rem;
+
+  /* 3. Component/layout tokens shared by shells and future sections. */
+  --header-height: 4.5rem;
+  --page-gutter: clamp(1rem, 4vw, 2rem);
+  --section-space: clamp(3rem, 7vw, 6rem);
+  --content-max-width: 80rem;
+  --button-radius: var(--radius);
+  --card-padding: 1.5rem;
+}
+
+/* Prepared for a later dark variant; no theme toggle is rendered. */
+.dark {
+  --background: var(--brand-navy);
+  --foreground: var(--brand-paper);
+  --card: var(--neutral-dark-surface);
+  --card-foreground: var(--brand-paper);
+  --popover: var(--neutral-dark-surface);
+  --popover-foreground: var(--brand-paper);
+  --primary: var(--brand-gold);
+  --primary-foreground: var(--brand-navy);
+  --muted: var(--neutral-dark-surface);
+  --muted-foreground: var(--neutral-dark-muted);
+  --destructive: var(--brand-coral-light);
+  --destructive-foreground: var(--neutral-ink);
+  --border: var(--neutral-dark-border);
+  --input: var(--neutral-dark-border);
+  --ring: var(--brand-gold);
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html {
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    margin: 0;
+    min-width: 20rem;
+    min-height: 100svh;
+    background-image: linear-gradient(to bottom, rgb(185 227 243 / 0.025) 1px, transparent 1px);
+    background-size: 100% 0.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  section[id], main[id] {
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+  }
+}
+
+@utility content-container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+@utility legal-grid {
+  background-image:
+    linear-gradient(rgb(110 183 213 / 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(110 183 213 / 0.16) 1px, transparent 1px);
+  background-size: 2.75rem 2.75rem;
+}
+
+/* Motion is decorative only; the reduced-motion override below disables it. */
+.hero-orbit {
+  animation: hero-orbit 12s ease-in-out infinite;
+}
+
+.hero-glow {
+  animation: glow-breathe 7s ease-in-out infinite;
+}
+
+.results-grid {
+  background-image:
+    linear-gradient(rgb(185 227 243 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(185 227 243 / 0.07) 1px, transparent 1px);
+  background-size: 3.25rem 3.25rem;
+}
+
+@keyframes hero-orbit {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(-1rem, 0.75rem, 0) rotate(7deg); }
+}
+
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.42; transform: scale(0.96); }
+  50% { opacity: 0.78; transform: scale(1.05); }
+}
+
+@media (min-width: 48rem) {
+  :root { --header-height: 5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
