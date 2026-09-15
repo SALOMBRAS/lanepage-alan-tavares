@@ -79,21 +79,11 @@ export const headerData: HeaderData = {
 
 export const statistics: readonly Statistic[] = [
   {
-    id: "casos",
-    value: 500,
-    suffix: "+",
-    label: "casos analisados — dado fictício",
-    decimals: 0,
-    displayValue: "500+",
-    countDurationMs: 1200,
-    isMock: true,
-  },
-  {
     id: "experiencia",
-    value: 15,
-    label: "anos de experiência — dado fictício",
+    value: 5,
+    label: "anos de atuação — dado fictício",
     decimals: 0,
-    displayValue: "15",
+    displayValue: "5",
     countDurationMs: 1000,
     isMock: true,
   },
