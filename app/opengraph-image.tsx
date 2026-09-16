@@ -1,10 +1,9 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Imagem de compartilhamento provisória — advocacia criminal";
+export const alt = "Alan Tavares Advocacia — Direito do Consumidor e Direito Criminal";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-/** Technical placeholder only; replace when the visual identity is implemented. */
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
@@ -20,7 +19,7 @@ export default function OpenGraphImage() {
           fontSize: 40,
         }}
       >
-        Advocacia criminal · Imagem provisória
+        Alan Tavares Advocacia
       </div>
     ),
     size,
