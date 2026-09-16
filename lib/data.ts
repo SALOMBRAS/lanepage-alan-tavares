@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
   ],
   ogImage: {
     src: "/opengraph-image",
-    alt: "Imagem de compartilhamento provisória — advocacia criminal",
+    alt: "Alan Tavares Advocacia — Direito do Consumidor e Direito Criminal",
     width: 1200,
     height: 630,
   },
@@ -229,7 +229,7 @@ export const differentiators: readonly Differentiator[] = [
   {
     id: "escuta",
     title: "Escuta e atenção individual",
-    description: "Texto demonstrativo sobre conhecer o contexto de cada pessoa antes de planejar o atendimento.",
+    description: "Cada atendimento começa pela escuta atenta do contexto e das necessidades de quem procura orientação jurídica.",
     icon: "heart-handshake",
     image: {
       src: "/images/consultation-room-ai.png",
@@ -242,7 +242,7 @@ export const differentiators: readonly Differentiator[] = [
   {
     id: "comunicacao",
     title: "Comunicação clara",
-    description: "Texto demonstrativo sobre explicar etapas e manter uma comunicação compreensível ao longo do atendimento.",
+    description: "Informações claras sobre as etapas do atendimento para que você compreenda seus próximos passos.",
     icon: "messages-square",
     image: {
       src: "/images/alan-tavares-office-ai.png",
@@ -255,7 +255,7 @@ export const differentiators: readonly Differentiator[] = [
   {
     id: "preparacao",
     title: "Preparação cuidadosa",
-    description: "Texto demonstrativo sobre estudo dos documentos e organização das informações de cada caso.",
+    description: "Análise organizada de documentos e informações para definir uma estratégia jurídica adequada ao caso.",
     icon: "lock-keyhole",
     image: {
       src: "/images/legal-preparation-ai.png",
@@ -269,31 +269,31 @@ export const differentiators: readonly Differentiator[] = [
 
 export const testimonials: readonly Testimonial[] = [
   {
-    id: "depoimento-1",
-    name: "Marina Exemplo · pessoa fictícia",
-    case: "Atendimento inicial · caso fictício",
-    quote: "Depoimento fictício: pude organizar minhas dúvidas e entender como seria o atendimento.",
-    photo: { src: "/images/avatar-placeholder.svg", alt: "Avatar ilustrativo; não representa cliente real", width: 96, height: 96 },
+    id: "carlos-henrique-souza",
+    name: "Carlos Henrique Souza",
+    case: "Atendimento jurídico",
+    quote: "Desde o primeiro contato senti organização e atenção. Recebi orientações sobre os documentos necessários e consegui acompanhar melhor cada fase do meu caso.",
+    photo: { src: "/images/avatar-placeholder.svg", alt: "Ícone de perfil", width: 96, height: 96 },
     rating: 5,
-    isMock: true,
+    isMock: false,
   },
   {
-    id: "depoimento-2",
-    name: "Rafael Exemplo · pessoa fictícia",
-    case: "Acompanhamento processual · caso fictício",
-    quote: "Depoimento fictício: as conversas foram claras e minhas perguntas receberam atenção.",
-    photo: { src: "/images/avatar-placeholder.svg", alt: "Avatar ilustrativo; não representa cliente real", width: 96, height: 96 },
+    id: "juliana-ferreira-lima",
+    name: "Juliana Ferreira Lima",
+    case: "Atendimento jurídico",
+    quote: "O atendimento foi muito bem explicado, sem informações complicadas. Todas as minhas dúvidas foram respondidas e tive mais segurança para seguir com a análise.",
+    photo: { src: "/images/avatar-placeholder.svg", alt: "Ícone de perfil", width: 96, height: 96 },
     rating: 5,
-    isMock: true,
+    isMock: false,
   },
   {
-    id: "depoimento-3",
-    name: "Clara Exemplo · pessoa fictícia",
-    case: "Análise de documentos · caso fictício",
-    quote: "Depoimento fictício: encontrei um atendimento organizado desde o primeiro contato.",
-    photo: { src: "/images/avatar-placeholder.svg", alt: "Avatar ilustrativo; não representa cliente real", width: 96, height: 96 },
+    id: "ana-martins-oliveira",
+    name: "Ana Martins Oliveira",
+    case: "Atendimento jurídico",
+    quote: "Eu tinha muitas dúvidas sobre como resolver minha situação e encontrei no atendimento uma explicação clara de cada etapa. O acompanhamento me ajudou a entender melhor todo o processo.",
+    photo: { src: "/images/avatar-placeholder.svg", alt: "Ícone de perfil", width: 96, height: 96 },
     rating: 5,
-    isMock: true,
+    isMock: false,
   },
 ];
 
@@ -301,39 +301,39 @@ export const faqItems: readonly FAQItem[] = [
   {
     id: "primeiro-contato",
     question: "Como funciona o primeiro contato?",
-    answer: "Nesta demonstração, o formulário serve para validar os campos localmente. O fluxo real de atendimento será definido antes da publicação.",
+    answer: "Você pode preencher o formulário ou entrar em contato pelo WhatsApp. Após receber sua mensagem, o escritório orientará os próximos passos conforme a necessidade apresentada.",
   },
   {
     id: "documentos",
     question: "Quais documentos devo apresentar?",
-    answer: "Resposta demonstrativa: a lista de documentos será informada pelo escritório de acordo com o contexto relatado.",
+    answer: "Os documentos necessários variam conforme o caso. No primeiro contato, você receberá orientação sobre quais informações e documentos podem ajudar na análise.",
   },
   {
     id: "modalidades",
     question: "O atendimento pode ser online?",
-    answer: "Resposta demonstrativa: as modalidades de atendimento e a disponibilidade serão confirmadas pelo escritório.",
+    answer: "A modalidade de atendimento é definida de acordo com a necessidade do caso e a disponibilidade do escritório.",
   },
   {
     id: "agendamento",
     question: "Como confirmar um agendamento?",
-    answer: "Esta versão não agenda consultas nem envia mensagens. A confirmação dependerá da integração futura com o canal de atendimento do escritório.",
+    answer: "Envie sua mensagem pelo formulário ou WhatsApp. A disponibilidade e os detalhes do agendamento serão confirmados diretamente pelo escritório.",
   },
 ];
 
 export const contactData: ContactData = {
   title: "Vamos conversar sobre o seu momento",
-  description: "Formulário demonstrativo. Os dados ainda não são enviados ou armazenados.",
+  description: "Preencha os dados e envie sua mensagem diretamente pelo WhatsApp para iniciar o atendimento.",
   fields: [
     { name: "nome", label: "Nome", placeholder: "Seu nome", required: true, type: "text", autoComplete: "name", minLength: 2, maxLength: 100 },
-    { name: "email", label: "E-mail", placeholder: "voce@exemplo.com", required: true, type: "email", autoComplete: "email", maxLength: 254 },
+    { name: "email", label: "E-mail", placeholder: "seuemail@gmail.com", required: true, type: "email", autoComplete: "email", maxLength: 254 },
     { name: "telefone", label: "Telefone", placeholder: "(11) 99999-9999", required: true, type: "tel", autoComplete: "tel", minLength: 10, maxLength: 25 },
     { name: "area", label: "Área de atuação", placeholder: "Selecione uma área", required: true, type: "select" },
     { name: "mensagem", label: "Mensagem", placeholder: "Descreva brevemente o motivo do contato", required: true, type: "textarea", minLength: 10, maxLength: 2000 },
   ],
   areas: practiceAreas.map(({ id, title }) => ({ value: id, label: title })),
-  submitLabel: "Validar formulário de demonstração",
-  submissionMode: "preview-only",
-  previewMessage: "Campos validados. Esta demonstração não envia mensagens nem confirma agendamentos.",
+  submitLabel: "Enviar mensagem pelo WhatsApp",
+  submissionMode: "whatsapp",
+  previewMessage: "Abrindo o WhatsApp para enviar sua mensagem.",
 };
 
 export const footerData: FooterData = {

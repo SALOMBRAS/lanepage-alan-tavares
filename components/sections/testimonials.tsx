@@ -4,12 +4,12 @@ import { Card, CardContent, Container, Reveal, SectionHeader } from "@/component
 import { cn } from "@/lib/utils";
 import type { TestimonialsProps } from "@/types";
 
-/** Static, keyboard-readable testimonial layout that makes demonstration content explicit. */
+/** Static, keyboard-readable layout for authorized client testimonials. */
 export function Testimonials({ items, className }: TestimonialsProps) {
   return (
     <section id="depoimentos" aria-label="Depoimentos de clientes" className={cn("bg-muted/55 py-section", className)}>
       <Container>
-        <SectionHeader align="center" title="Relatos de atendimento" subtitle="Espaço preparado para publicar depoimentos autorizados e verificáveis." className="mb-10" />
+        <SectionHeader align="center" title="Relatos de atendimento" subtitle="Experiências compartilhadas por clientes atendidos pelo escritório." className="mb-10" />
         <div className="grid gap-5 lg:grid-cols-3">
           {items.map((item, index) => (
             <Reveal key={item.id} delay={index * 0.08}>

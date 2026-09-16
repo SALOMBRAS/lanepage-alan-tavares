@@ -176,8 +176,7 @@ export interface ContactData {
   fields: readonly ContactField[];
   areas: readonly ContactAreaOption[];
   submitLabel: string;
-  /** An actual delivery integration is intentionally outside this scaffold. */
-  submissionMode: "preview-only";
+  submissionMode: "whatsapp";
   previewMessage: string;
 }
 
