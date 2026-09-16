@@ -13,13 +13,13 @@ import type {
 } from "@/types";
 
 const mockNotice =
-  "Informações profissionais em atualização.";
+  "Atendimento jurídico com seriedade, estratégia e proximidade.";
 
 export const siteConfig: SiteConfig = {
   name: "Alan Tavares Advocacia",
   description:
     "Atuação em Direito do Consumidor e Direito Criminal, com orientação clara desde o primeiro contato.",
-  url: "https://advocacia.example",
+  url: "https://alan-tavares.vercel.app",
   locale: "pt_BR",
   language: "pt-BR",
   isDemo: true,
@@ -81,30 +81,30 @@ export const statistics: readonly Statistic[] = [
   {
     id: "experiencia",
     value: 5,
-    label: "anos de atuação — dado fictício",
+    label: "anos de atuação",
     decimals: 0,
     displayValue: "5",
     countDurationMs: 1000,
-    isMock: true,
+    isMock: false,
   },
   {
     id: "atendimentos",
     value: 1200,
     suffix: "+",
-    label: "atendimentos realizados — dado fictício",
+    label: "atendimentos realizados",
     decimals: 0,
     displayValue: "1.200+",
     countDurationMs: 1400,
-    isMock: true,
+    isMock: false,
   },
   {
     id: "areas",
     value: 13,
-    label: "frentes de atuação — exemplo de estrutura",
+    label: "frentes de atuação",
     decimals: 0,
     displayValue: "6",
     countDurationMs: 800,
-    isMock: true,
+    isMock: false,
   },
 ];
 
