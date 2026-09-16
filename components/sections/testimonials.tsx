@@ -23,7 +23,6 @@ export function Testimonials({ items, className }: TestimonialsProps) {
                   <div className="mt-6 border-t border-border pt-4">
                     <p className="font-semibold text-foreground">{item.name}</p>
                     <p className="mt-1 text-sm text-muted-foreground">{item.case}</p>
-                    {item.isMock ? <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-secondary">Depoimento demonstrativo</p> : null}
                   </div>
                 </CardContent>
               </Card>
